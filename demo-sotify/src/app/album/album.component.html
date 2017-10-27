@@ -1,101 +1,158 @@
-<!-- overlay -->
-<div class="container overlay">
-  <!-- blockblack -->
-  <div class="blockblack">
-    <!-- latest release starts-->
-    <div id="album" class="releases spacer">
-      <h3>
-        <span class="glyphicon glyphicon-music"></span> Album Releases</h3>
-      <div class="row">
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/3.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
-            </div>
-          </div>
+<!-- Header Starts -->
+<div class="navbar-wrapper ">
+  <div class="container">
+
+    <div class="navbar navbar-inverse navbar-fixed-top animated fadeInDown" role="navigation" id="top-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Logo Starts -->
+          <a class="navbar-brand" href="#home">
+            <img src="assets/images/logo.png" height="30" alt="logo"/>
+          </a>
+          <!-- #Logo Ends -->
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
 
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/1.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        <div class="search">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input #searchValue name="username" type="text" class="form-control" placeholder="Enter artist name ...">
             </div>
-          </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
         </div>
 
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/2.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
-            </div>
-          </div>
+        <!-- Nav Starts -->
+        <div class="navbar-collapse  collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a routerLink="/artist">Artist</a>
+            </li>
+            <li>
+              <a routerLink="/playlist">Playlist</a>
+            </li>
+            <li>
+              <a routerLink="/album">Albums</a>
+            </li>
+            <li>
+              <a routerLink="/blogevent">Events & Blog</a>
+            </li>
+            <li>
+              <a routerLink="contact">Contact</a>
+            </li>
+          </ul>
         </div>
+        <!-- #Nav Ends -->
 
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/4.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
 
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/4.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
-            </div>
-          </div>
-        </div>
+  </div>
+</div>
+<!-- #Header Starts -->
 
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/2.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/3.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-3 col-xs-12">
-          <div class="album">
-            <img src="assets/images/1.jpg" class="img-responsive" alt="music theme"/>
-            <div class="albumdetail">
-              <h5>Crazy Freso</h5>
-              <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
-            </div>
-          </div>
+<!-- latest release starts-->
+<div id="album" class="releases spacer">
+  <h3>
+    <span class="glyphicon glyphicon-music"></span> Album Releases</h3>
+  <div class="row">
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/3.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
         </div>
       </div>
     </div>
-    <!-- latest release ends-->
+
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/1.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/2.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/4.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/4.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/2.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/3.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+      <div class="album">
+        <img src="assets/images/1.jpg" class="img-responsive" alt="music theme" />
+        <div class="albumdetail">
+          <h5>Crazy Freso</h5>
+          <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail">
+            <span class="glyphicon glyphicon-headphones"></span> Listen Song</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- latest release ends-->
+
+
+
+

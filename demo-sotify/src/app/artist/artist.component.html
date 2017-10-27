@@ -1,9 +1,66 @@
-<div class="container overlay">
-  <!-- blockblack -->
-  <div class="blockblack">
+<!-- Header Starts -->
+<div class="navbar-wrapper ">
+  <div class="container">
+
+    <div class="navbar navbar-inverse navbar-fixed-top animated fadeInDown" role="navigation" id="top-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Logo Starts -->
+          <a class="navbar-brand" href="#home">
+            <img src="assets/images/logo.png" height="30" alt="logo"/>
+          </a>
+          <!-- #Logo Ends -->
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="search">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input #searchValue name="username" type="text" class="form-control" placeholder="Enter artist name ...">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+        </div>
+
+        <!-- Nav Starts -->
+        <div class="navbar-collapse  collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a routerLink="/artist">Artist</a>
+            </li>
+            <li>
+              <a routerLink="/playlist">Playlist</a>
+            </li>
+            <li>
+              <a routerLink="/album">Albums</a>
+            </li>
+            <li>
+              <a routerLink="/blogevent">Events & Blog</a>
+            </li>
+            <li>
+              <a routerLink="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- #Nav Ends -->
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- #Header Starts -->
+
+  <div class="homeinfo blockblack">
 
     <!-- About Starts -->
-    <div id="about" class="spacer">
+    <div class="spacer">
       <h3>
         <span class="glyphicon glyphicon-user"></span> About Me</h3>
       <div class="row">
@@ -32,7 +89,7 @@
     <!-- About Ends -->
 
     <!-- playlist Starts -->
-    <div id="playlist" class="spacer">
+    <div class="spacer">
       <div class="row">
         <div class="col-md-12 col-xs-12">
           <h3>
@@ -45,4 +102,3 @@
     <!-- #playlist Ends -->
 
   </div>
-</div>
