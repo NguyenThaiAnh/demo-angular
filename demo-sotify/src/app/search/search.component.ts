@@ -13,4 +13,12 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {}
 
+  loadArtists(searchValue: string) {
+    this.service.searchArtist(searchValue)
+      .then(res => {
+        this.artists = res.artists.items;
+        console.log(res.artists.items);
+      })
+      .catch(err => console.log(err));
+  }
 }
