@@ -10,7 +10,6 @@
             <img src="assets/images/logo.png" height="30" alt="logo"/>
           </a>
           <!-- #Logo Ends -->
-
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -58,28 +57,38 @@
 <!-- #Header Starts -->
 
 <!-- playlist Starts -->
-<div class="spacer">
-  <div class="row">
+<div class="spacer blockblack">
+  <div class="row playlist">
     <div class="col-md-12 col-xs-12">
       <h3>
         <span class="glyphicon glyphicon-list"></span> Playlist</h3>
           <div class="row">
-            <div class="col-xs-12 col-sm-3 col-lg-4">
-              <a href="#" data-toggle="modal" data-target="#blogdetail">
-                <img src="assets/images/1.jpg" class="img-responsive" alt="music theme" />
-              </a>
+            <div class="col-xs-12 col-sm-3 col-lg-4 avatar">
+              <img src="{{album.images[1].url}}" class="img-responsive" alt="music theme" />
             </div>
             <div class="col-xs-12  col-sm-6 col-lg-5 ">
-              <h5>
-                <a href="#" data-toggle="modal" data-target="#blogdetail">Christmas Eve Party</a>
+              <h5 class="title">
+                <a href="#" data-toggle="modal">{{ album.name }}</a>
               </h5>
-              <p>Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.</p>
-            </div>
-            <div class="col-xs-12  col-sm-3 col-lg-3 date">
-              <b>2014</b>
-              <span>Dec 28</span>
+              <div class="content">
+                <p>{{ album.label }}</p>
+                <small> Date: {{ album.release_date }}</small>
+              </div>
             </div>
           </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 item" *ngFor="let track of album.tracks.items">
+      <a class="col-xs-12 col-sm-3 col-lg-4">
+        <img src="../../assets/images/disk.png" class="img-responsive" alt="music theme" />
+      </a>
+      <div class="title col-xs-12 col-sm-9  col-lg-8">
+        <h4>{{ track.name }}</h4>
+        <audio src="{{track.preview_url}}" controls>
+          Your browser does not support the audio element.
+        </audio>
+      </div>
     </div>
   </div>
 </div>

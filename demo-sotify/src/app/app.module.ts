@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   { path: 'artist',       component: ArtistComponent},
   { path: 'artist/:id',   component: ArtistComponent},
   { path: 'album',        component: AlbumComponent},
-  { path: 'album/:id',    component: AlbumComponent },
+  { path: 'playlist/:id',    component: PlaylistComponent },
   { path: 'blogevent',    component: EventComponent},
   { path: 'contact',      component: ContactComponent},
 ];

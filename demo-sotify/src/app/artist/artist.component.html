@@ -101,8 +101,9 @@
             <img [src]=" album.images[1].url" alt="Image" class="img-responsive" alt="music theme" />
             <div class="albumdetail">
               <h5>{{ album.name }}</h5>
-              <a [routerLink]="['/album/' + album.id]" class="listen" data-toggle="modal" data-target="#albumdetail">
-                <span class="glyphicon glyphicon-headphones"></span> Listen album</a>
+              <p><a [routerLink]="['/playlist/' + album.id]" class="listen">
+                <span class="glyphicon glyphicon-headphones"></span> Listen album</a></p>
+
             </div>
           </div>
         </div>
