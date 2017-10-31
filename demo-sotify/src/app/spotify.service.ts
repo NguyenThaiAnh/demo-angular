@@ -7,7 +7,7 @@ export class SpotifyService {
   private key     = 'Bearer';
   private apiUrl  = 'https://api.spotify.com/v1/';
   private headers = new Headers();
-  private token = `${this.key} BQA4IkufoAkcYWV-TWUckizBncn6yoHi0AEr3WU1-oRq4wghHb4m4cWPXC3F1cBSVezBZvLUXRsAhPIoNl8Y_flSAy5PKHg0WQjBPDRfHkxk7TXJ8JEawdR6jNuEchti_iZILqPWr3RuTU5VY0sff2uuYsCT2zR9NiFdJTDXeZQxoELb33G7MzMDg4Q`;
+  private token = `${this.key} BQCl0yx9nMTuh_gd5a7kpXTLc-rYaYL1S_TpTRCA6gnuM7LFjxQkLEHUdDeTUMURK9BwvYqX4SqY2Eet0PlkiPMbPXlji2H-0ARhZyy3adeB0REYkaS69adaUdHYXD0sYxQjeOj0xcYeBik4FushlTE4Y0OHwwxiJnmMfL62KfARAEk2up354QPJK6Q`;
 
   constructor(private http: Http) { }
 
@@ -22,4 +22,29 @@ export class SpotifyService {
       .toPromise()
       .catch(err => Promise.reject(err));
   }
+
+  getArtistById(id: string) {
+    const url = `https://api.spotify.com/v1/artists/${id}`;
+    this.headers.append('Content-Type', 'application/json');
+    this.headers.append('Authorization', this.token);
+    const options = new RequestOptions({headers: this.headers});
+
+    return this.http.get(url, options)
+      .map(res => res.json())
+      .toPromise()
+      .catch(err => Promise.reject(err));
+  }
+
+  getAlbumByArtist(id: string) {
+    const url = `https://api.spotify.com/v1/artists/${id}/albums`;
+    this.headers.append('Content-Type', 'application/json');
+    this.headers.append('Authorization', this.token);
+
+    const options = new RequestOptions({headers: this.headers});
+    return this.http.get(url, options)
+      .map(res => res.json())
+      .toPromise()
+      .catch(err => Promise.reject(err));
+  }
+
 }

@@ -6,7 +6,7 @@
       <div class="container">
         <div class="navbar-header">
           <!-- Logo Starts -->
-          <a class="navbar-brand" href="#home">
+          <a class="navbar-brand" routerLink="/search">
             <img src="assets/images/logo.png" height="30" alt="logo"/>
           </a>
           <!-- #Logo Ends -->
@@ -61,7 +61,21 @@
   <!-- home banner starts -->
   <div id="home" class="homeinfo" *ngIf="artists">
     <div class="row" *ngFor="let artist of artists">
-      <div class="col-sm-12 col-xs-12">
+      <div class="col-sm-3 col-xs-12">
+        <div class="artist" *ngIf="artist.images.length > 0; else defaultImage">
+          <img [src] = "artist.images[1].url" class="media-object img-circle animated fadeInRightBig" alt="dj" />
+        </div>
+
+        <!--ng-template-->
+        <ng-template #defaultImage>
+          <div class="artist">
+            <img src = "../../assets/images/3.jpg" class="media-object img-circle animated fadeInRightBig" alt="dj" />
+          </div>
+        </ng-template>
+        <!--ng-template-->
+
+      </div>
+      <div class="col-sm-9 col-xs-12">
         <div class="fronttext">
           <h2 class="  animated fadeInUpBig">
             <!--<span class="glyphicon glyphicon-headphones"></span> {{ artist.name }} -->
@@ -70,21 +84,9 @@
           </h2>
 
           <br>
-          <!--<p class=" animated fadeInUp">{{artist.genres[0]}}</p>-->
-          <span class="label label-success">{{artist.genres[0]}}</span>
-          <div *ngIf="artist.images.length > 0">
-            <img style="width: 250px; height: 250px;" [src] = "artist.images[1].url" class="img-circle animated fadeInRightBig" alt="dj" />
-          </div>
+          <span class="animated fadeInUpBig label label-success">{{artist.genres[0]}}</span>
         </div>
       </div>
-
-      <!--<div class="col-sm-5 col-xs-12 col-sm-offset-1">-->
-        <!--<div class="player" *ngIf="artist.images.length > 0">-->
-          <!--<img style="width: 300px; height: 300px;" [src] = "artist.images[1].url" class="graphics hidden-xs  animated fadeInRightBig" alt="dj" />-->
-          <!--&lt;!&ndash;<iframe style="display: none"></iframe>&ndash;&gt;-->
-        <!--</div>-->
-      <!--</div>-->
-
     </div>
   </div>
   <!-- home banner ends -->

@@ -2,3 +2,37 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+.avatar img{
+  width: 345px;
+  height: 345px;
+  margin-left: 50px;
+}
+.genres span.label-success{
+   font-family: sans-serif;
+   margin-right: -2px;
+}
+blockquote{
+  font-size: 40px;
+}
+.album {
+  height: 380px;
+}
+.media img {
+  width:  110px;
+  height: 110px;
+}
+.list-group-item {
+  background-color: black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #3a3737;
+}
+.list-group-item .media{
+  padding: 20px;
+}
+.list-group-item:last-child{
+   border-bottom-right-radius: 0px;
+   border-bottom-left-radius: 0px;
+   border-bottom: none;
+}

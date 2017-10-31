@@ -14,12 +14,14 @@ import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full'},
-  { path: 'search',   component: SearchComponent},
-  { path: 'playlist', component: PlaylistComponent},
-  { path: 'artist',   component: ArtistComponent},
-  { path: 'album',    component: AlbumComponent},
+  { path: 'search',       component: SearchComponent},
+  { path: 'playlist',     component: PlaylistComponent},
+  { path: 'artist',       component: ArtistComponent},
+  { path: 'artist/:id',   component: ArtistComponent},
+  { path: 'album',        component: AlbumComponent},
+  { path: 'album/:id',    component: AlbumComponent },
   { path: 'blogevent',    component: EventComponent},
-  { path: 'contact',  component: ContactComponent},
+  { path: 'contact',      component: ContactComponent},
 ];
 
 @NgModule({

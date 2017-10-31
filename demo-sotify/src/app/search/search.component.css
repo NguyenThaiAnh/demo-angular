@@ -1,12 +1,24 @@
+.row{
+  margin-bottom: 50px;
+}
 .fronttext {
   padding-bottom: 40px;
+  padding-top: 10%;
 }
-
+.fronttext h2 {
+  font-size: 50px;
+}
+.fronttext span.label-success{
+  font-family: "Segoe UI";
+  white-space: pre-wrap;
+}
 .homeinfo{
   padding-top: 100px;
 }
-
 .img-circle{
   padding-top: 5px;
 }
-
+.artist img{
+  width: 250px;
+  height: 250px;
+}
