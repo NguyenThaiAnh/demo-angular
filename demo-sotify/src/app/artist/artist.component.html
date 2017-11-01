@@ -1,64 +1,4 @@
-<!--&lt;!&ndash; Header Starts &ndash;&gt;-->
-<!--<div class="navbar-wrapper ">-->
-  <!--<div class="container">-->
-
-    <!--<div class="navbar navbar-inverse navbar-fixed-top animated fadeInDown" role="navigation" id="top-nav">-->
-      <!--<div class="container">-->
-        <!--<div class="navbar-header">-->
-          <!--&lt;!&ndash; Logo Starts &ndash;&gt;-->
-          <!--<a class="navbar-brand" routerLink="/search">-->
-            <!--<img src="assets/images/logo.png" height="30" alt="logo"/>-->
-          <!--</a>-->
-          <!--&lt;!&ndash; #Logo Ends &ndash;&gt;-->
-
-          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">-->
-            <!--<span class="sr-only">Toggle navigation</span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-          <!--</button>-->
-        <!--</div>-->
-
-        <!--<div class="search">-->
-          <!--<form class="navbar-form navbar-left" role="search">-->
-            <!--<div class="form-group">-->
-              <!--<input #searchValue name="username" type="text" class="form-control" placeholder="Enter artist name ...">-->
-            <!--</div>-->
-            <!--<button type="button" class="btn btn-default" (click)="loadArtists(searchValue.value)">Search</button>-->
-          <!--</form>-->
-        <!--</div>-->
-
-        <!--&lt;!&ndash; Nav Starts &ndash;&gt;-->
-        <!--<div class="navbar-collapse  collapse">-->
-          <!--<ul class="nav navbar-nav navbar-right">-->
-            <!--<li routerLinkActive="active">-->
-              <!--<a routerLink="/artist">Artist</a>-->
-            <!--</li>-->
-            <!--<li routerLinkActive="active">-->
-              <!--<a routerLink="/playlist">Playlist</a>-->
-            <!--</li>-->
-            <!--<li routerLinkActive="active">-->
-              <!--<a routerLink="/album">Albums</a>-->
-            <!--</li>-->
-            <!--<li routerLinkActive="active">-->
-              <!--<a routerLink="/blogevent">Events & Blog</a>-->
-            <!--</li>-->
-            <!--<li routerLinkActive="active">-->
-              <!--<a routerLink="/contact">Contact</a>-->
-            <!--</li>-->
-          <!--</ul>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; #Nav Ends &ndash;&gt;-->
-
-      <!--</div>-->
-    <!--</div>-->
-
-  <!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash; #Header Starts &ndash;&gt;-->
-
-<!--***********************************-->
-<app-nav></app-nav>
+<app-nav (artist)="keySearch($event)"></app-nav>
 
   <div class="homeinfo">
     <!-- About Starts -->
@@ -93,7 +33,7 @@
     <!-- About Ends -->
 
     <!-- latest release starts-->
-    <div id="album" class="releases spacer">
+    <div id="album" class="releases spacer" *ngIf="albums">
       <h3>
         <span class="glyphicon glyphicon-music"></span> Album Releases
       </h3>
@@ -103,7 +43,7 @@
             <img [src]=" album.images[1].url" alt="Image" class="img-responsive" alt="music theme" />
             <div class="albumdetail">
               <h5>{{ album.name }}</h5>
-              <p><a [routerLink]="['/playlist/' + album.id]" class="listen">
+              <p><a [routerLink]="['/albums/' + album.id]" class="listen">
                 <span class="glyphicon glyphicon-headphones"></span> Listen album</a></p>
 
             </div>

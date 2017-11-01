@@ -1,0 +1,29 @@
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 20px;
+}
+.fronttext{
+  padding-top: 25px;
+}
+.fronttext h2 {
+  font-size: 30px;
+}
+.fronttext span.label-success{
+  font-family: "Segoe UI";
+  white-space: pre-wrap;
+}
+.homeinfo{
+  padding-top: 100px;
+}
+.img-circle{
+  padding-top: 5px;
+}
+.artist img{
+  width: 150px;
+  height: 150px;
+  margin-left: 100px;
+}
+ul{
+  list-style-type: none;
+}

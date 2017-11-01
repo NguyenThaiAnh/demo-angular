@@ -4,24 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ArtistComponent } from './artist/artist.component';
 import { AlbumComponent } from './album/album.component';
-import { SearchComponent } from './search/search.component';
 import { SpotifyService } from './spotify.service';
 import { HttpModule} from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
-import { PlaylistComponent } from './playlist/playlist.component';
-import { EventComponent } from './event/event.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/search', pathMatch: 'full'},
-  { path: 'search',       component: SearchComponent},
-  { path: 'playlist',     component: PlaylistComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home',       component: HomeComponent},
+  { path: 'albums',     component: AlbumComponent},
   { path: 'artist',       component: ArtistComponent},
   { path: 'artist/:id',   component: ArtistComponent},
-  { path: 'album',        component: AlbumComponent},
-  { path: 'playlist/:id',    component: PlaylistComponent },
-  { path: 'blogevent',    component: EventComponent},
+  { path: 'albums/:id',    component: AlbumComponent },
   { path: 'contact',      component: ContactComponent},
 ];
 
@@ -30,11 +26,9 @@ const appRoutes: Routes = [
     AppComponent,
     ArtistComponent,
     AlbumComponent,
-    SearchComponent,
-    PlaylistComponent,
-    EventComponent,
     ContactComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

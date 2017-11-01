@@ -1,4 +1,42 @@
-.blockblack{
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px
+.playlist {
+  margin: 60px 0px;
 }
+.avatar img{
+  margin-left: 50px;
+}
+h5.title {
+  font-size: 40px;
+}
+.content {
+  margin-top: 10px;
+}
+.content p, small {
+  font-size: 18px;
+}
+.item{
+  border-bottom: 1px solid #403c3c;
+  margin-left: 80px;
+}
+.item h4{
+  color: #f2ab00;
+}
+.item img{
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+.item .title{
+  margin-top: 25px;
+}
+.item:last-child{
+  border-bottom: none;
+}
+.title h5{
+  font-size: 25px;
+  margin-top: 5px;
+}
+.title audio{
+  width: 100%;
+}
+
+

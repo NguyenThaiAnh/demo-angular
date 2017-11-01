@@ -6,7 +6,7 @@
       <div class="container">
         <div class="navbar-header">
           <!-- Logo Starts -->
-          <a class="navbar-brand" routerLink="/search">
+          <a class="navbar-brand" routerLink="/">
             <img src="assets/images/logo.png" height="30" alt="logo"/>
           </a>
           <!-- #Logo Ends -->
@@ -25,29 +25,22 @@
               <input #searchValue name="username" type="text" class="form-control" placeholder="Enter artist name ...">
             </div>
             <button type="button" class="btn btn-default" (click)="search(searchValue.value)">Search</button>
-                    <!--*ngIf="page === 'artist'"-->
-                    <!--(click)="loadArtists(searchValue.value)"-->
-
-            <!--<button type="button" class="btn btn-default" *ngIf="page === 'album'" (click)="loadAlbums(searchValue.value)">Search</button>-->
           </form>
         </div>
 
         <!-- Nav Starts -->
         <div class="navbar-collapse  collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" >
+            <li routerLinkActive="active">
+              <a routerLink="/home">Home</a>
+            </li>
             <li routerLinkActive="active">
               <a routerLink="/artist">Artist</a>
             </li>
-            <li routerLinkActive="active">
-              <a routerLink="/playlist">Playlist</a>
+            <li routerLinkActive="active" >
+              <a routerLink="/albums">Albums</a>
             </li>
-            <li routerLinkActive="active">
-              <a routerLink="/album">Albums</a>
-            </li>
-            <li routerLinkActive="active">
-              <a routerLink="/blogevent">Events & Blog</a>
-            </li>
-            <li routerLinkActive="active">
+            <li routerLinkActive="active" >
               <a routerLink="/contact">Contact</a>
             </li>
           </ul>

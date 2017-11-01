@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Subscription} from 'rxjs/Subscription';
+import {SpotifyService} from '../spotify.service';
+import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-album',
@@ -6,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
-  page = 'album';
-  constructor() { }
+  album: any;
+  subscription: Subscription;
+  constructor(
+    private service: SpotifyService,
+    private activedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    // sessionStorage.setItem('page', this.page);
+    this.subscription = this.activedRoute.params.subscribe(
+      (params: Params) => {
+        this.service.getTrackByAlbum(params['id']).then((data: any) 	=>  {
+          this.album = data;
+          console.log(data);
+        });
+      }
+    );
   }
 
 }
