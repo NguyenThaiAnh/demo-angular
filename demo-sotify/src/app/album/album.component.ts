@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
-
+  page = 'album';
   constructor() { }
 
   ngOnInit() {
+    // sessionStorage.setItem('page', this.page);
   }
 
 }

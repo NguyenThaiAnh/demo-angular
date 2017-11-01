@@ -11,6 +11,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { EventComponent } from './event/event.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavComponent } from './nav/nav.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full'},
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     SearchComponent,
     PlaylistComponent,
     EventComponent,
-    ContactComponent
+    ContactComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

@@ -8,13 +8,17 @@ import {IArtist} from '../interface/artist.interface';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  artists: IArtist[];
-  constructor(private service: SpotifyService) { }
+  artists: any;
+  constructor(
+    private service: SpotifyService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
 
-  loadArtists(searchValue: string) {
-    this.service.searchArtist(searchValue)
+  }
+
+  keySearch(event) {
+    this.service.searchArtist(event)
       .then(res => {
         this.artists = res.artists.items;
         console.log(res.artists.items);
