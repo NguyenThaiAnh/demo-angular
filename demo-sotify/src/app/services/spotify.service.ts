@@ -7,7 +7,7 @@ export class SpotifyService {
   private key     = 'Bearer';
   private apiUrl  = 'https://api.spotify.com/v1/';
   private headers = new Headers();
-  private token = `${this.key} BQC-Z6BRkYD5OmzRa4pVSkJRCXN-Cx8_JkYBK11kzn3mMaUem0Jmw41SrF1gmmk-Dwq_Y_kmGYU9BSupBUT0h270iCqrP0xSI4UN_OUuVBGDbpt4JImEhkKvjBBli7YjblY6jRFNBH7-_wbTY2y-l5VeBDrRRLY7Su9jKIlJqBT6We4Rkz0_RPbvxs8`;
+  private token = `${this.key} BQAXKwtgmKG8qOs8AREFqH0Nvi-pIKJJE4I95syuT5wbkr910Aduz8HBDdrmxIpYCYRiWXQGyZY3AQS1DVBJGrr-x8N3l5K0Xm5bfQFyXgFevwkPrrVSJOMhd1lNiwC4D-EtzpZsL_VWdCrUdSUUk6M3xMTmSMApd_ljSv6Z854lZrxzeKFuSH9LnWY`;
 
   constructor(private http: Http) { }
 

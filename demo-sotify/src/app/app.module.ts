@@ -11,6 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { CapitalizePipe } from './pipe/capitalize.pipe';
 import {SpotifyService} from './services/spotify.service';
+import { SortPipe } from './pipe/sort.pipe';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     ContactComponent,
     NavComponent,
     HomeComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

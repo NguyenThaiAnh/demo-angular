@@ -55,12 +55,19 @@
 
   <!--Artist Realtive-->
   <div class="releases spacer" *ngIf="artistRelative">
-    <h3>
-      <span class="glyphicon glyphicon-music"></span> TOP Artists
-    </h3>
     <div class="row">
-
-      <div class="col-sm-3 col-xs-12" *ngFor="let artist of artistRelative;">
+      <h3>
+        <span class="glyphicon glyphicon-music"></span> TOP Artists
+      </h3>
+      <button type="button" class="btn btn-default btn-sm" (click)="onSort('name')">
+        <span class="glyphicon glyphicon-sort"></span> name
+      </button>
+      <button type="button" class="btn btn-default btn-sm" (click)="onSort('price')">
+        <span class="glyphicon glyphicon-sort"></span> followers
+      </button>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-xs-12" *ngFor="let artist of artistRelative | sort:sortBy :sortValue;">
         <div class="album" *ngIf="artist.images.length > 0; else imageDefault">
           <img [src]=" artist.images[1].url" class="img-responsive" alt="music theme"/>
           <div class="albumdetail">

@@ -15,9 +15,11 @@ export class ArtistComponent implements OnInit {
   artist: any;
   artistRelative: any;
   albums: IAlbum[];
-  artistId: string[] = ['32lVGr0fSRGT6okLKHiP68', '6MddNz1oXWvuY1ZWrsRqQF', '5fJ6x5SuTLWxc9fFZ0ZX6o', '3mibIJiduF0MVLLAvHZAxw', '7l7DZWQaVIS13zFgSf7eb4'];
   @Output('search') search = new EventEmitter<String>();
   key: string;
+  sortBy: string = 'name';
+  sortValue: number = 1;
+  artistId: string[] = ['32lVGr0fSRGT6okLKHiP68', '6MddNz1oXWvuY1ZWrsRqQF', '5fJ6x5SuTLWxc9fFZ0ZX6o', '3mibIJiduF0MVLLAvHZAxw', '7l7DZWQaVIS13zFgSf7eb4'];
 
   constructor(
     private service: SpotifyService,
@@ -53,4 +55,9 @@ export class ArtistComponent implements OnInit {
     this.router.navigate(['/home'], { queryParams: { 'keySearch': this.key } });
   }
 
+  //sort
+  onSort(col) {
+    this.sortBy = col;
+    this.sortValue = -this.sortValue;
+  }
 }
