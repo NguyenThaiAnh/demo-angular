@@ -5,6 +5,9 @@
 
   <!-- home banner starts -->
   <div id="home" class="homeinfo" *ngIf="artists">
+    <h3>
+      <span class="glyphicon glyphicon-music"></span> Result
+    </h3>
     <div class="row" *ngFor="let artist of artists">
 
       <div class="col-sm-3 col-xs-12">
@@ -19,8 +22,8 @@
           </div>
         </ng-template>
         <!--ng-template-->
-
       </div>
+
       <div class="col-sm-9 col-xs-12">
         <div class="fronttext">
           <h2 class="  animated fadeInUpBig">
@@ -32,6 +35,7 @@
           <span class="animated fadeInUpBig label label-success" *ngIf="artist.genres[0]">{{ artist.genres[0] | capitalize}}</span>
         </div>
       </div>
+
     </div>
   </div>
   <!-- home banner ends -->

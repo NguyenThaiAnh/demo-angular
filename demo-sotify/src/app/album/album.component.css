@@ -58,3 +58,17 @@ h5.title {
 /*title of track*/
 
 
+/*album HOT*/
+.img-responsive{
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+.album{
+  height: 420px;
+}
+.albumdetail .listen{
+  position: absolute;
+  bottom: 5px;
+}
+
