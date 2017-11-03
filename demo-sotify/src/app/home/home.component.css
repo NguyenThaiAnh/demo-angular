@@ -1,3 +1,7 @@
+/*homeinfo*/
+.homeinfo{
+  padding-top: 100px;
+}
 .row {
   margin-right: -15px;
   margin-left: -15px;
@@ -13,9 +17,7 @@
   font-family: "Segoe UI";
   white-space: pre-wrap;
 }
-.homeinfo{
-  padding-top: 100px;
-}
+
 .img-circle{
   padding-top: 5px;
 }

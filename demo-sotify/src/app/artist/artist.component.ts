@@ -1,8 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SpotifyService} from '../spotify.service';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {IArtist} from '../interface/artist.interface';
 import {IAlbum} from '../interface/album.interface';
 
 @Component({
@@ -15,14 +14,14 @@ export class ArtistComponent implements OnInit {
   subscription: Subscription;
   artist: any;
   albums: IAlbum[];
-  artistName: string = 'taylor';
+  artistName = 'taylor';
   @Output('search') search = new EventEmitter<String>();
   key: string;
 
   constructor(
     private service: SpotifyService,
     private activedRoutes: ActivatedRoute,
-    public router: Router) { }
+    private router: Router) { }
 
   ngOnInit() {
     this.subscription = this.activedRoutes.params.subscribe(
@@ -44,12 +43,10 @@ export class ArtistComponent implements OnInit {
     );
   }
 
+  // send param key search from nav component to home component
   keySearch(event) {
-    // console.log(event);
     this.key = event;
-    // this.router.navigate(['home'], { queryParams: {'keySearch': this.key} });
     this.router.navigate(['/home'], { queryParams: { 'keySearch': this.key } });
-    // this.search.emit(event);
   }
 
 }

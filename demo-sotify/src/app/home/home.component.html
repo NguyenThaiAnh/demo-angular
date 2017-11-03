@@ -1,6 +1,5 @@
 <app-nav (artist)="keySearch($event)"></app-nav>
 
-<!--<h1 style="margin-top: 300px">SEARCH</h1>-->
 
 <div class="container overlay blockblack">
 
@@ -25,13 +24,12 @@
       <div class="col-sm-9 col-xs-12">
         <div class="fronttext">
           <h2 class="  animated fadeInUpBig">
-            <!--<span class="glyphicon glyphicon-headphones"></span> {{ artist.name }} -->
             <span class="glyphicon glyphicon-headphones"></span>
-            <a [routerLink]="['/artist/' + artist.id]">{{ artist.name }}</a>
+            <a [routerLink]="['/artist/' + artist.id]">{{ artist.name | capitalize}}</a>
           </h2>
 
           <br>
-          <span class="animated fadeInUpBig label label-success">{{artist.genres[0]}}</span>
+          <span class="animated fadeInUpBig label label-success">{{ artist.genres[0] | capitalize}}</span>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { CapitalizePipe } from './pipe/capitalize.pipe';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     AlbumComponent,
     ContactComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,

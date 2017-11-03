@@ -2,21 +2,29 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+
+/*homeinfor*/
+.homeinfo {
+  padding: 50px 20px 0;
+}
+
+/* artist */
 .avatar img{
   width: 345px;
   height: 345px;
   margin-left: 50px;
 }
+
 .genres span.label-success{
    font-family: sans-serif;
    margin-right: -2px;
 }
-blockquote{
-  font-size: 40px;
-}
+
+/* album */
 .album {
   height: 380px;
 }
+
 .media img {
   width:  110px;
   height: 110px;
@@ -35,7 +43,4 @@ blockquote{
    border-bottom-right-radius: 0px;
    border-bottom-left-radius: 0px;
    border-bottom: none;
-}
-.homeinfo {
-  padding: 50px 20px 0;
 }

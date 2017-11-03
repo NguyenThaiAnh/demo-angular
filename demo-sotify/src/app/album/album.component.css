@@ -1,18 +1,28 @@
+/*playlist*/
 .playlist {
   margin: 60px 0px;
 }
+/*playlist*/
+
+
+/*avatar*/
 .avatar img{
   margin-left: 50px;
 }
-h5.title {
-  font-size: 40px;
-}
+/*avatar*/
+
+
+/*content*/
 .content {
   margin-top: 10px;
 }
 .content p, small {
   font-size: 18px;
 }
+/*content*/
+
+
+/*item track*/
 .item{
   border-bottom: 1px solid #403c3c;
   margin-left: 80px;
@@ -31,6 +41,10 @@ h5.title {
 .item:last-child{
   border-bottom: none;
 }
+/*item track*/
+
+
+/*title of track*/
 .title h5{
   font-size: 25px;
   margin-top: 5px;
@@ -38,5 +52,9 @@ h5.title {
 .title audio{
   width: 100%;
 }
+h5.title {
+  font-size: 40px;
+}
+/*title of track*/
 
 

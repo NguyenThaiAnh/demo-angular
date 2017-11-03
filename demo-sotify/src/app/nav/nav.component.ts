@@ -19,12 +19,6 @@ export class NavComponent implements OnInit {
   }
 
   search(keySearch: string) {
-    // if (this.router.url !== '/home') {
-    //   this.artist.emit(keySearch);
-    //   this.router.navigate(['home']);
-    // }else {
-    //   this.artist.emit(keySearch);
-    // }
     this.artist.emit(keySearch);
   }
 }
