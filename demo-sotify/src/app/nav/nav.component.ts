@@ -1,7 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {SpotifyService} from '../spotify.service';
 import {IArtist} from '../interface/artist.interface';
-import {Router} from '@angular/router';
+import {SpotifyService} from '../services/spotify.service';
 
 @Component({
   selector: 'app-nav',

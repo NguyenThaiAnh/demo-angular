@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {SpotifyService} from '../spotify.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Subscription} from 'rxjs/Rx';
+import {SpotifyService} from '../services/spotify.service';
 
 @Component({
   selector: 'app-home',

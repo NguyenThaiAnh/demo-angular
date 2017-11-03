@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ArtistComponent } from './artist/artist.component';
 import { AlbumComponent } from './album/album.component';
-import { SpotifyService } from './spotify.service';
 import { HttpModule} from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { CapitalizePipe } from './pipe/capitalize.pipe';
+import {SpotifyService} from './services/spotify.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},

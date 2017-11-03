@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
-import {SpotifyService} from '../spotify.service';
+import {SpotifyService} from '../services/spotify.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({

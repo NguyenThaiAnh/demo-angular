@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {SpotifyService} from '../spotify.service';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {IAlbum} from '../interface/album.interface';
+import {SpotifyService} from '../services/spotify.service';
 
 @Component({
   selector: 'app-artist',
