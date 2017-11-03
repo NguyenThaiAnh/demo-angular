@@ -75,3 +75,7 @@ h5{
   margin-bottom: 8px;
   margin-left: 22px;
 }
+button.sortName:focus, button.sortFollowers:focus{
+  background-color: #f1aa00;
+  color: white;
+}
