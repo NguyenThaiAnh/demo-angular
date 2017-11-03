@@ -13,6 +13,8 @@ export class AlbumComponent implements OnInit {
   albums: any;
   subscription: Subscription;
   key: string;
+  sortBy: string = 'name';
+  sortValue: number = 1;
   artistId: string[] = ['4AK6F7OLvEQ5QYCBNiQWHq', '6eUKZXaKkcviH0Ku9w2n3V', '6VuMaDnrHyPL1p4EHjYLi7', '3BmGtnKgCSGYIUhmivXKWX', '1KCSPY1glIKqW2TotWuXOR', '4nDoRrQiYLoBzwC5BhVJzF'];
 
   constructor(
@@ -46,6 +48,12 @@ export class AlbumComponent implements OnInit {
   keySearch(event) {
     this.key = event;
     this.router.navigate(['/home'], {queryParams: {'keySearch': this.key}});
+  }
+
+  //sort name
+  onSort(col) {
+    this.sortBy = col;
+    this.sortValue = -this.sortValue;
   }
 
 }

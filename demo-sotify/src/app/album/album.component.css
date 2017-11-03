@@ -71,4 +71,17 @@ h5.title {
   position: absolute;
   bottom: 5px;
 }
+.row h3{
+  display: inline-block;
+}
+.row button{
+  opacity: 1;
+  padding-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 22px;
+}
+button.sortName:focus, button.sortFollowers:focus{
+  background-color: #f1aa00;
+  color: white;
+}
 
