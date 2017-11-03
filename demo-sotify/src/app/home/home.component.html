@@ -29,7 +29,7 @@
           </h2>
 
           <br>
-          <span class="animated fadeInUpBig label label-success">{{ artist.genres[0]}}</span>
+          <span class="animated fadeInUpBig label label-success" *ngIf="artist.genres[0]">{{ artist.genres[0] | capitalize}}</span>
         </div>
       </div>
     </div>

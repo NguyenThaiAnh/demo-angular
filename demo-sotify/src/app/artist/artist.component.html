@@ -1,56 +1,86 @@
 <app-nav (artist)="keySearch($event)"></app-nav>
 
-  <div class="homeinfo">
-    <!-- About Starts -->
-    <div class="spacer" *ngIf="artist">
-      <h3>
-        <span class="glyphicon glyphicon-user"></span> About me</h3>
-      <div class="row">
-        <div class=" avatar col-lg-5 col-sm-4  col-xs-12" *ngIf="artist.images.length > 0; else defaultImage">
-          <img [src]="artist.images[0].url" alt="{{ artist.name }}"  class="img-thumbnail"/>
+<div class="homeinfo">
+  <!-- About Starts -->
+  <div class="spacer" *ngIf="artist">
+    <h3>
+      <span class="glyphicon glyphicon-user"></span> About me</h3>
+    <div class="row">
+      <div class=" avatar col-lg-5 col-sm-4  col-xs-12" *ngIf="artist.images.length > 0; else defaultImage">
+        <img [src]="artist.images[0].url" alt="{{ artist.name }}" class="img-thumbnail"/>
+      </div>
+
+      <ng-template #defaultImage>
+        <div class=" avatar col-lg-5 col-sm-4  col-xs-12">
+          <img src="../../assets/images/3.jpg" alt="{{ artist.name }}" class="img-thumbnail"/>
         </div>
+      </ng-template>
 
-        <ng-template #defaultImage>
-          <div class=" avatar col-lg-5 col-sm-4  col-xs-12">
-            <img src = "../../assets/images/3.jpg"  alt="{{ artist.name }}"  class="img-thumbnail"/>
-          </div>
-        </ng-template>
+      <div class="col-lg-7 col-sm-8  col-xs-12">
+        <blockquote>{{ artist.name | capitalize}}</blockquote>
+        <p>
+          <i class="glyphicon glyphicon-play-circle"></i>
+          <a href=" {{ artist.external_urls.spotify }}" target="_blank">View Spotify</a><br/><br/>
 
-        <div class="col-lg-7 col-sm-8  col-xs-12">
-          <blockquote>{{ artist.name | capitalize}}</blockquote>
-          <p>
-            <i class="glyphicon glyphicon-play-circle"></i>
-            <a href=" {{ artist.external_urls.spotify }}" target="_blank">View Spotify</a><br/><br/>
-
-            <i class="glyphicon glyphicon-play-circle"></i> Genres:
-            <span class="genres" *ngIf="artist.genres">
+          <i class="glyphicon glyphicon-play-circle"></i> Genres:
+          <span class="genres" *ngIf="artist.genres">
               <span class="label label-success" *ngFor="let genre of artist.genres">{{ genre | capitalize}}</span>
             </span>
-          </p>
-        </div>
+        </p>
       </div>
     </div>
-    <!-- About Ends -->
+  </div>
+  <!-- About Ends -->
 
-    <!-- latest release starts-->
-    <div id="album" class="releases spacer" *ngIf="albums">
-      <h3>
-        <span class="glyphicon glyphicon-music"></span> Album Releases
-      </h3>
-      <div class="row">
-        <div class="col-sm-3 col-xs-12" *ngFor="let album of albums; let i = index">
-          <div class="album">
-            <img [src]=" album.images[1].url" alt="Image" class="img-responsive" alt="music theme" />
-            <div class="albumdetail">
-              <h5>{{ album.name | capitalize}}</h5>
-              <p><a [routerLink]="['/albums/' + album.id]" class="listen">
-                <span class="glyphicon glyphicon-headphones"></span> Listen album</a></p>
+  <!-- latest release starts-->
+  <div id="album" class="releases spacer" *ngIf="albums">
+    <h3>
+      <span class="glyphicon glyphicon-music"></span> Album Releases
+    </h3>
+    <div class="row">
+      <div class="col-sm-3 col-xs-12" *ngFor="let album of albums; let i = index">
+        <div class="album">
+          <img [src]=" album.images[1].url" alt="Image" class="img-responsive" alt="music theme"/>
+          <div class="albumdetail">
+            <h5>{{ album.name | capitalize}}</h5>
+            <p><a [routerLink]="['/albums/' + album.id]" class="listen">
+              <span class="glyphicon glyphicon-headphones"></span> Listen album</a></p>
 
-            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- latest release ends-->
-
   </div>
+  <!-- latest release ends-->
+
+  <!--Artist Realtive-->
+  <div class="releases spacer" *ngIf="artistRelative">
+    <h3>
+      <span class="glyphicon glyphicon-music"></span> TOP Artists
+    </h3>
+    <div class="row">
+
+      <div class="col-sm-3 col-xs-12" *ngFor="let artist of artistRelative;">
+        <div class="album" *ngIf="artist.images.length > 0; else imageDefault">
+          <img [src]=" artist.images[1].url" class="img-responsive" alt="music theme"/>
+          <div class="albumdetail">
+            <a [routerLink]="['/artist/' + artist.id]"><h5>{{ artist.name | capitalize}}</h5></a>
+            <span class="label label-warning">Follower: {{ artist.followers.total }}</span>
+          </div>
+        </div>
+
+
+        <ng-template #imageDefault>
+          <div class="album">
+          <img src="../../assets/images/4.jpg" class="img-responsive" alt="music theme"/>
+            <div class="albumdetail">
+              <a [routerLink]="['/artist/' + artist.id]"><h5>{{ artist.name | capitalize}}</h5></a>
+              <span class="label label-warning">Follower: {{ artist.followers.total }}</span>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <!--Artist Realtive-->
+</div>

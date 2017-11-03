@@ -13,8 +13,9 @@ export class ArtistComponent implements OnInit {
 
   subscription: Subscription;
   artist: any;
+  artistRelative: any;
   albums: IAlbum[];
-  artistName = 'taylor';
+  artistId: string[] = ['32lVGr0fSRGT6okLKHiP68', '6MddNz1oXWvuY1ZWrsRqQF', '5fJ6x5SuTLWxc9fFZ0ZX6o', '3mibIJiduF0MVLLAvHZAxw', '7l7DZWQaVIS13zFgSf7eb4'];
   @Output('search') search = new EventEmitter<String>();
   key: string;
 
@@ -34,10 +35,13 @@ export class ArtistComponent implements OnInit {
 
           this.service.getAlbumByArtist(params['id']).then((data: any) => {
             this.albums = data.items;
-            // console.log(data);
           });
         }else {
-          this.service.searchArtist(this.artistName);
+          const random = Math.floor(Math.random() * 3);
+          this.service.getArtistRelative(this.artistId[random]).then((data: any) 	=>  {
+            console.log(data.artists);
+            this.artistRelative = data.artists;
+          });
         }
       }
     );
